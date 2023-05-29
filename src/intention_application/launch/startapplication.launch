@@ -1,0 +1,24 @@
+<launch> 
+    <!-- Start Nodes -->
+       <include file=  "/home/hamza/ros_ws/src/ros_astra_camera/launch/astra.launch" /> 
+
+    <include file="/home/hamza/ros_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/launch/ur10e_bringup.launch">
+        <arg name="robot_ip" value="172.31.1.115" />
+            <arg name= "kinematics_config"   value="/home/hamza/my_robot_calibration.yaml"/>
+    </include>
+    <include file=  "/home/hamza/ros_ws/src/universal_robot/ur10e_moveit_config/launch/moveit_planning_execution.launch"/>
+
+
+    <node    name="camera_Transform"    pkg="intention_application"    type="CameraTransformation.py"   />  
+  <node    name="tf2transform"    pkg="intention_application"    type="Tf2Moveit.py"   />
+      <node    name="SaveImageOfScene"    pkg="intention_application"    type="saveimage.py"                 />
+      <node    name="client"    pkg="intention_application"    type="client.py"  output="screen" />
+      <node    name="imageprocessing"    pkg="intention_application"    type="imageprocessing.py"  output="screen" />
+     <!--     <node    name="pose_giver"    pkg="intention_application"    type="singleposesender.py"  output="screen" /> -->
+
+  <!--    <node    name="pose_publisher"    pkg="intention_application"    type="posepublisher.py"    output="screen"/>-->
+
+    
+
+</launch>
+

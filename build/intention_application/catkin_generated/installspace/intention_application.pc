@@ -1,0 +1,8 @@
+prefix=/home/hamza/ros_ws/install
+
+Name: intention_application
+Description: Description of intention_application
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rpspy message_runtime

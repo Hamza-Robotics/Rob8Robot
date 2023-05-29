@@ -1,0 +1,17 @@
+<launch> 
+    <!-- Start Nodes -->
+    <include file=  "/home/hamza/ros_ws/src/ros_astra_camera/launch/astra.launch" output="screen"/> 
+    <include file="/home/hamza/ros_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/launch/ur10e_bringup.launch">
+        <arg name="robot_ip" value="172.31.1.115" />
+        <arg name= "kinematics_config"   value="/home/hamza/my_robot_calibration.yaml"/>
+
+    </include>
+    <include file=  "/home/hamza/ros_ws/src/universal_robot/ur10e_moveit_config/launch/moveit_planning_execution.launch" output="screen" />
+        <node    name="pose_publisher"    pkg="intention_application"    type="posepublisher.py"    output="screen"/>
+        <node    name="handeyecalib"    pkg="intention_application"    type="handeyecalibration/handeyecalibration.py"    output="screen"/>
+
+
+    handeyecalibration.py
+
+</launch>
+

@@ -1,0 +1,1 @@
+/home/hamza/ros_ws/devel/.private/intention_application/share/roseus/ros/intention_application/manifest.l

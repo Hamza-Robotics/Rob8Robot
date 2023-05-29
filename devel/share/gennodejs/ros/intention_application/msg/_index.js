@@ -1,0 +1,1 @@
+/home/hamza/ros_ws/devel/.private/intention_application/share/gennodejs/ros/intention_application/msg/_index.js

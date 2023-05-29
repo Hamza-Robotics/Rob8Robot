@@ -1,0 +1,15 @@
+   <!-- start ArUco -->
+<launch>
+    <include file=  "/home/hamza/ros_ws/src/ros_astra_camera/launch/astra.launch" output="screen"/> 
+    
+       <node name="aruco_tracker" pkg="aruco_ros" type="single">
+        <remap from="/camera_info" to="/camera/rgb" />
+        <remap from="/image" to="/camera/rgb/image_rect_color" />
+        <param name="image_is_rectified" value="true"/>
+        <param name="marker_size"        value="0.027"/>
+        <param name="marker_id"          value="45"/>
+        <param name="reference_frame"    value="camera_link"/>
+        <param name="camera_frame"       value="camera_depth_optical_frame"/>
+        <param name="marker_frame"       value="camera_marker" />
+    </node>
+</launch>

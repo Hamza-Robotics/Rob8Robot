@@ -1,0 +1,1 @@
+/home/hamza/ros_ws/devel/.private/astra_camera/share/roseus/ros/astra_camera/srv/GetDeviceInfo.l

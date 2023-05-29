@@ -1,0 +1,6 @@
+devel_space: /home/hamza/ros_ws/devel
+install: false
+install_space: /home/hamza/ros_ws/install
+profile: default
+source_space: /home/hamza/ros_ws/src
+workspace: /home/hamza/ros_ws
