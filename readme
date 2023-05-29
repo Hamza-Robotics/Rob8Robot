@@ -1,1 +1,15 @@
-hue
+Contains code needed to control the gazebot. Gazebot is an eye controlled robot.
+
+For the eye tracking and intention estimation see: https://github.com/decamargo10/rob8_main_processing
+
+
+To run this code:
+
+1. Clone the repository and source it.
+2. Run the eye tracking program on the other pc. 
+3. Run the roslaunch file in the intention package: startapplication.launch
+
+
+You need to install the UR driver and your camera driver and you need to change the launch file to accomodate those changes.
+
+There is a hand eye calibration module for the hand eye calibration. 
