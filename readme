@@ -1,15 +1,34 @@
-Contains code needed to control the gazebot. Gazebot is an eye controlled robot.
+# GazeBot Control Code
 
-For the eye tracking and intention estimation see: https://github.com/decamargo10/rob8_main_processing
+This repository contains the code required to control the GazeBot, an eye-controlled robot. The project involves eye tracking using a GRU (Gated Recurrent Unit) and intention estimation. For the eye tracking GRU and intention estimation, refer to the [rob8_main_processing](https://github.com/decamargo10/rob8_main_processing) repository.
 
+## Setup and Usage
 
-To run this code:
+To run this code, follow the steps below:
 
-1. Clone the repository and source it.
-2. Run the eye tracking program on the other pc. 
-3. Run the roslaunch file in the intention package: startapplication.launch
+1. **Clone and Source the Repository:**
+   - Clone this repository to your local machine.
+   - Source the repository to make the code accessible.
 
+2. **Run Eye Tracking Program:**
+   - Run the eye tracking program on another PC. Refer to the [rob8_main_processing](https://github.com/decamargo10/rob8_main_processing) repository for details on setting up eye tracking.
 
-You need to install the UR driver and your camera driver and you need to change the launch file to accomodate those changes.
+3. **Launch Intention Package:**
+   - Run the following command to launch the intention package:
+     ```bash
+     roslaunch intention_application startapplication.launch
+     ```
+     This launch file (`startapplication.launch`) orchestrates various components, including camera transforms, Pose estimation of the human, MoveIt for motion planning, image processing, and TCP client communication with the other PC.
 
-There is a hand eye calibration module for the hand eye calibration. 
+## Package Information
+
+- **Package Name:** `intention_application`
+- **Launch File:** `startapplication.launch`
+
+## Note
+
+- This code is in ROS1
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
